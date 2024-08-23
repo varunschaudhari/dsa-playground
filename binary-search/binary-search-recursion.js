@@ -1,9 +1,9 @@
 function binarySearch(arr, target, left, right) {
-    if (right < left) return false;
+    if (right < left) return -1;
 
     const mid = Math.floor((left + right) / 2);
 
-    if (arr[mid] === target) return true;
+    if (arr[mid] === target) return mid;
 
     if (arr[mid] < target) {
         return binarySearch(arr, target, mid + 1, right);
