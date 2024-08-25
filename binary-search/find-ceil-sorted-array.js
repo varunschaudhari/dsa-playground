@@ -7,14 +7,14 @@ function binarySearch(nums, target) {
         const mid = Math.floor((start + end) / 2);
         console.log(target, nums[mid]);
         if (nums[mid] < target) {
-            res = mid;
             start = mid + 1;
         } else {
+            res = mid;
             end = mid - 1;
         }
     }
 
-    return start;
+    return res;
 }
 
 const arr = [1, 3, 5, 6];
