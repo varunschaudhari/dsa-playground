@@ -19,7 +19,7 @@ function binarySearch(arr) {
         }
 
         // Decide which half to search next
-        if (arr[start] < arr[mid]) {
+        if (arr[prev] < arr[mid]) {
             // Left part is sorted, go to the right part
             start = mid + 1;
         } else {
