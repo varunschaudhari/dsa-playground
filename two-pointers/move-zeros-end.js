@@ -1,28 +1,15 @@
 function moveZeros(arr) {
     let left = 0;
-    let right = arr.length - 1;
+    let right = 0;
 
-    while (left <= right) {
-        while (arr[left] !== 0) {
+    while (right < arr.length) {
+        if (arr[right] !== 0) {
+            // swapping with array destructuring
+            [arr[left], arr[right]] = [arr[right], arr[left]];
             left++;
         }
-
-        while (arr[right] === 0) {
-            right--;
-        }
-
-        // swapping with array destructuring
-        [arr[left], arr[right]] = [arr[right], arr[left]];
-
-        // swapping with temporary variable
-        // const temp = arr[left];
-        // arr[left] = arr[right];
-        // arr[right] = temp;
-
-        left++;
-        right--;
+        right++;
     }
-
     return arr;
 }
 
