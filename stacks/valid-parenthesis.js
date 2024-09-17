@@ -26,3 +26,13 @@ function isValid(s) {
 
 const s = "((";
 console.log(isValid(s));
+
+
+// Time Complexity: O(n) :-
+// For each character in the string, the operations performed are:
+//  Pushing an element onto the stack (O(1) time).
+//  Popping an element from the stack (O(1) time).
+//  Checking the top of the stack and comparing (O(1) time).
+// Thus, the overall time complexity is O(n), where n is the length of the string.
+
+// Space Complexity: O(n)
